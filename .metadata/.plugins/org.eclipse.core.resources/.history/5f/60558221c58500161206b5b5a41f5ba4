@@ -1,0 +1,6 @@
+public class TrajectoryFollower {
+	double kP, kI, kD, kV, kA;
+	public TrajectoryFollower(double kP, kI, kD, kV, kA){
+		
+	}
+}

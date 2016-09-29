@@ -1,0 +1,22 @@
+public class TrajectoryFollower {
+	
+	double kP, kI, kD, kV, kA;
+	Segment[] traj;
+	
+	public TrajectoryFollower(){
+		
+	}
+	
+	public void setTrajectory(Segment[] traj){
+		this.traj = traj;
+	}
+	
+	public void setGains(double kP, kI, kD, kV, kA){
+		this.kP = kP;
+		this.kI = kI;
+		this.kD = kD;
+		this.kV = kV;
+		this.kA = kA;
+	}
+	public double calcFeedForward()
+}

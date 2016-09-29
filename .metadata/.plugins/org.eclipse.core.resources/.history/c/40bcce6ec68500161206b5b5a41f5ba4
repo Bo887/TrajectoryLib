@@ -1,0 +1,14 @@
+public class TrajectoryFollower {
+	
+	double kP, kI, kD, kV, kA;
+	Segment[] traj;
+	
+	public TrajectoryFollower(){
+		
+	}
+	
+	public void setTrajectory(Segment[] traj){
+		this.traj = traj;
+	}
+	
+}
