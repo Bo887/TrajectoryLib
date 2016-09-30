@@ -1,3 +1,5 @@
+package trajectory;
+import trajectory.*; 
 public class TrajectoryGenerator{
 	
 	double max_vel;

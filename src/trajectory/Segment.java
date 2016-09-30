@@ -1,3 +1,4 @@
+package trajectory;
 public class Segment{
 		
 	double pos, vel, accel, time;	
