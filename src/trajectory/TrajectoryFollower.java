@@ -36,7 +36,7 @@ public class TrajectoryFollower{
 		curr_segment = 0;
 	}
 	
-	public void calcFeedForward(double curr_vel, double curr_accel){
+	public double calcFeedForward(double curr_vel, double curr_accel){
 		return kV*curr_vel + kA*curr_accel;
 	}	
 
@@ -54,12 +54,12 @@ public class TrajectoryFollower{
 	}
 
 	public double calcMotorOutput(double curr_actual_dist){
-		if (!isFinishedTrajectory()){ 
-			Segment s = new traj[curr_segment];
+		if (!isFinished()){ 
+			Segment s = traj[curr_segment];
 			feedForwardValue = calcFeedForward(s.vel, s.accel);
 			feedBackValue = calcFeedBack(s.pos, curr_actual_dist);
 			output = feedForwardValue + feedBackValue;
-			currenst_segment++;
+			current_segment++;
 		}
 		else return 0;
 	}
