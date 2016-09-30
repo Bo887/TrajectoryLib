@@ -1,3 +1,0 @@
-INDEX VERSION 1.127+C:\Users\Eric\Documents\GitHub\TrajectoryLib\.metadata\.plugins\org.eclipse.jdt.core
-3635113529.index
-2557634897.index
