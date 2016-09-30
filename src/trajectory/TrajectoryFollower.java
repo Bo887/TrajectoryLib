@@ -59,7 +59,8 @@ public class TrajectoryFollower{
 			feedForwardValue = calcFeedForward(s.vel, s.accel);
 			feedBackValue = calcFeedBack(s.pos, curr_actual_dist);
 			output = feedForwardValue + feedBackValue;
-			current_segment++;
+			curr_segment++;
+			return output;
 		}
 		else return 0;
 	}
