@@ -12,5 +12,7 @@ tmp/**/*
 *~.nib
 local.properties
 .classpath
-.settings/
+.settings/*
+.recommenders/*
+.metadata/*
 .loadpath
