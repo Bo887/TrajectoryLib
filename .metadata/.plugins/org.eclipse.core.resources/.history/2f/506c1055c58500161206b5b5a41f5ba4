@@ -1,9 +1,0 @@
-public class TrajectoryFollower {
-	double kP, kI, kD, kV, kA;
-	public TrajectoryFollower(double kP, double kI, double kD, double kV, double kA){
-		this.kP = kP;
-		this.kI = kI;
-		this.kD = kD;
-		this.kA = kA;
-	}
-}
