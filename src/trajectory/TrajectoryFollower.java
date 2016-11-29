@@ -19,7 +19,7 @@ public class TrajectoryFollower{
 	PrintWriter f; 
 	public void init() throws IOException{
 		f = new PrintWriter(new BufferedWriter(new FileWriter("data.csv")), true);
-		f.println("output,time");
+		f.println("pos,vel,time");
 	}
 
 	public void setGains(double kV, double kA, double kP, double kI, double kD){
