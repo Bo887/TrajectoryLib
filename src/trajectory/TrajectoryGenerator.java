@@ -54,7 +54,9 @@ public class TrajectoryGenerator{
 			}
 			else{
 				double temp_curr_time = curr_time-(accel_time+cruise_time);
-				curr_pos = accel_dist+cruise_dist+(0.5*accel*temp_curr_time*temp_curr_time); 
+				double adjusted_curr_time = total_time-accel_time-cruise_time-temp_curr_time;
+				double adjusted_curr_pos = (0.5*accel*adjusted_curr_time*adjusted_curr_time); 
+				curr_pos = end_pos-adjusted_curr_pos; 
 				curr_vel = cruise_vel-(accel*temp_curr_time);
 				curr_accel = -accel;
 			

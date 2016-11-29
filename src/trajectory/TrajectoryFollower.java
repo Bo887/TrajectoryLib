@@ -64,7 +64,7 @@ public class TrajectoryFollower{
 	public double calcMotorOutput(double curr_actual_dist) throws IOException{
 		while (!isFinished()){ 
 			Segment s = traj[curr_segment];
-			curr_actual_dist = s.pos - Math.random()*0.25;
+			curr_actual_dist = s.pos;// - Math.random()*0.5;
 			feedForwardValue = calcFeedForward(s.vel, s.accel);
 			feedBackValue = calcFeedBack(s.pos, curr_actual_dist);
 			output = feedForwardValue + feedBackValue;
@@ -72,7 +72,7 @@ public class TrajectoryFollower{
 			if (output>1) output = 1;
 			if (output<-1) output = -1;
 			System.out.println(Double.toString(curr_actual_dist) + "," + Double.toString(s.pos) + "," + Double.toString(s.vel) + "," + Double.toString(s.accel) +","+ Double.toString(output));
-			f.println(s.vel+ "," + s.time);
+			f.println(s.pos+ ","+s.vel+"," + s.time);
 			f.flush();
 		}
 		f.close();

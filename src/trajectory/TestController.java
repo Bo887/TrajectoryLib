@@ -21,7 +21,7 @@ public class TestController{
 		rightFollower.setTrajectory(rightTraj);		
 		double max_v = (1.0)*1/12;
 		double dt = 1.0/100.0;
-		rightFollower.setGains(max_v,0,100,0,0);
+		rightFollower.setGains(max_v,0,1,0,0);
 		leftFollower.setLoopTime(dt);
 		rightFollower.setLoopTime(dt);
 			
