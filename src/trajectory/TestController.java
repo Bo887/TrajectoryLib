@@ -15,13 +15,13 @@ public class TestController{
 
 		leftGenerator.setConfig(12,15,0.005);
 		rightGenerator.setConfig(12,15,0.005);
-		leftTraj = leftGenerator.generateTraj(0,0,20);
-		rightTraj = rightGenerator.generateTraj(0,0,20);
+		leftTraj = leftGenerator.generateTraj(0,0,5);
+		rightTraj = rightGenerator.generateTraj(0,0,5);
 		leftFollower.setTrajectory(leftTraj);
 		rightFollower.setTrajectory(rightTraj);		
-		double max_v = (1.0)*1/12;
+		double kv = (1.0)*1/12;
 		double dt = 1.0/100.0;
-		rightFollower.setGains(max_v,0,1,0,0);
+		rightFollower.setGains(kv,0,1,0,0);
 		leftFollower.setLoopTime(dt);
 		rightFollower.setLoopTime(dt);
 			
@@ -29,6 +29,7 @@ public class TestController{
 		rightFollower.init();
 				
 		double curr_pos =0;
+		//only testing right follower, bc left is the same
 		rightFollower.calcMotorOutput(curr_pos);
 		
 	}
