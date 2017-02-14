@@ -13,15 +13,15 @@ public class TestController{
 		TrajectoryFollower leftFollower = new TrajectoryFollower();
 		TrajectoryFollower rightFollower = new TrajectoryFollower();
 
-		leftGenerator.setConfig(12,15,0.005);
-		rightGenerator.setConfig(12,15,0.005);
-		leftTraj = leftGenerator.generateTraj(0,0,5);
-		rightTraj = rightGenerator.generateTraj(0,0,5);
+		leftGenerator.setConfig(15,20,0.02);
+		rightGenerator.setConfig(15,20,0.02);
+		leftTraj = leftGenerator.generateTraj(0,0,1);
+		rightTraj = rightGenerator.generateTraj(0,0,1);
 		leftFollower.setTrajectory(leftTraj);
 		rightFollower.setTrajectory(rightTraj);		
-		double kv = (1.0)*1/12;
-		double dt = 1.0/100.0;
-		rightFollower.setGains(kv,0,1,0,0);
+		double kv = (1.0)*1/15;
+		double dt = 1.0/50.0;
+		rightFollower.setGains(kv,0,0,0,0);
 		leftFollower.setLoopTime(dt);
 		rightFollower.setLoopTime(dt);
 			
